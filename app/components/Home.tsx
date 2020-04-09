@@ -2,6 +2,12 @@ import React from 'react';
 import { Menu, Tabs, Layout, Input, Button } from 'antd';
 import { Gitlab } from 'gitlab';
 import gitP, { SimpleGit, StatusResult } from 'simple-git/promise';
+import { remote } from 'electron';
+
+const path = remote.app.getPath('documents');
+
+const workPath = `${path}\\Nam_Viet`;
+const repoPath = `${workPath}\\test1`;
 
 const git: SimpleGit = gitP();
 
@@ -23,6 +29,7 @@ async function callback(key: unknown) {
   // api.Commits.create(1, 'master', 'Test commit from')
   const status: StatusResult = await git.status();
   console.log(status);
+  console.log(workPath);
 }
 
 export default function Home() {
