@@ -1,6 +1,9 @@
 import React from 'react';
 import { Menu, Tabs, Layout, Input, Button } from 'antd';
 import { Gitlab } from 'gitlab';
+import gitP, { SimpleGit, StatusResult } from 'simple-git/promise';
+
+const git: SimpleGit = gitP();
 
 const { Sider } = Layout;
 
@@ -18,6 +21,8 @@ async function callback(key: unknown) {
   const projects = await api.Projects.all({ maxPages: 2, perPage: 40 });
   console.log(projects);
   // api.Commits.create(1, 'master', 'Test commit from')
+  const status: StatusResult = await git.status();
+  console.log(status);
 }
 
 export default function Home() {

@@ -62,15 +62,6 @@
       "main.prod.js.map",
       "package.json"
     ],
-    "extraResources": [
-      {
-        "from": "./resources/git",
-        "to": "git",
-        "filter": [
-          "**/*"
-        ]
-      }
-    ],
     "dmg": {
       "contents": [
         {
@@ -115,10 +106,22 @@
     "url": "git+https://github.com/electron-react-boilerplate/electron-react-boilerplate.git"
   },
   "author": {
-    "name": "Vũ Văn Lịch",
-    "email": "mr.lync91@gmail.com",
-    "url": "https://git.nvcorp.net"
+    "name": "Electron React Boilerplate Maintainers",
+    "email": "electronreactboilerplate@gmail.com",
+    "url": "https://electron-react-boilerplate.js.org"
   },
+  "contributors": [
+    {
+      "name": "Vikram Rangaraj",
+      "email": "vikr01@icloud.com",
+      "url": "https://github.com/vikr01"
+    },
+    {
+      "name": "Amila Welihinda",
+      "email": "amilajack@gmail.com",
+      "url": "https://github.com/amilajack"
+    }
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/electron-react-boilerplate/electron-react-boilerplate/issues"
@@ -248,7 +251,6 @@
     "redux-logger": "^3.0.6",
     "rimraf": "^3.0.0",
     "sass-loader": "^8.0.2",
-    "simple-git-types": "^1.53.10",
     "sinon": "^8.1.1",
     "spectron": "^10.0.0",
     "style-loader": "^1.1.3",
